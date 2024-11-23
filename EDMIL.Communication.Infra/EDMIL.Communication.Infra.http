@@ -1,0 +1,6 @@
+@EDMIL.Communication.Infra_HostAddress = http://localhost:5070
+
+GET {{EDMIL.Communication.Infra_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

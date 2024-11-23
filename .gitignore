@@ -1,0 +1,44 @@
+# Visual Studio caches and temporary files
+*.suo
+*.pdb
+*.aps
+*.ncb
+*.vspscc
+*.vssscc
+*.scc
+*.tmp
+*.otc
+*.dlls
+*.obj
+*.cache
+*.filters
+*.ipch
+*.user
+*.sln.doc
+*.suo.cache
+*.Local.user
+*.vshost.exe
+*.exe
+*.dll
+*.config
+*.vsdoc
+*.webinfo
+*.zip
+*.rar
+
+# Visual Studio 2012+
+*.vs
+**/.vs/**
+
+# Build output
+bin/
+obj/
+
+# NuGet packages
+packages/
+
+# User specific files
+*.user
+
+# Log files
+*.log

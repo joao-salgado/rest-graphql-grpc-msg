@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="HotChocolate.AspNetCore" Version="14.1.0" />
+    <PackageReference Include="HotChocolate.Data" Version="14.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.11" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.11">
@@ -27,6 +29,10 @@
   <ItemGroup>
     <ProjectReference Include="..\EDMIL.Communication.Application\EDMIL.Communication.Application.csproj" />
     <ProjectReference Include="..\EDMIL.Communication.Domain\EDMIL.Communication.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\GraphQL\GraphQLModels\" />
   </ItemGroup>
 
 </Project>

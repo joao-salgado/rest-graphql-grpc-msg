@@ -1,4 +1,5 @@
 ﻿using EDMIL.Communication.Application.UseCases.Product.Create;
+using EDMIL.Communication.Application.UseCases.Product.List;
 using EDMIL.Communication.Domain.Entity.Product;
 using EDMIL.Communication.Infra.Repositories;
 
@@ -11,6 +12,7 @@ namespace EDMIL.Communication.Infra.Configs
         )
         {
             services.AddScoped<ICreateProduct, CreateProduct>();
+            services.AddScoped<IListProduct, ListProduct>();
 
             services.AddRepositories();
             return services;

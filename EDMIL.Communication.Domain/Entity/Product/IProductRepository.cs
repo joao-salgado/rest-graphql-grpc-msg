@@ -9,5 +9,6 @@ namespace EDMIL.Communication.Domain.Entity.Product
 {
     public interface IProductRepository : IGenericRepository<Product>
     {
+        public Task<List<Product>> List(CancellationToken cancellationToken);
     }
 }

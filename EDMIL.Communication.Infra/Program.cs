@@ -1,6 +1,9 @@
 using EDMIL.Communication.Infra.Configs;
 using EDMIL.Communication.Infra.Repositories;
 using Microsoft.EntityFrameworkCore;
+using HotChocolate.AspNetCore;
+using HotChocolate.Types;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +13,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddControllers();
 builder.Services.AddSwaggerGen();
 builder.Services.AddUseCases();
+builder.Services.AddGraphQLQueries();
+
 //builder.Services.AddAppConections(builder.Configuration);
 
 var connectionString = builder.Configuration.GetConnectionString("CommunicationDb");
@@ -18,6 +23,7 @@ builder.Services.AddDbContext<CommunicationDBContext>(options =>
 
 var app = builder.Build();
 app.MapControllers();
+app.MapGraphQL("/graphql");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

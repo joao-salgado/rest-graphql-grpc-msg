@@ -31,5 +31,11 @@ namespace EDMIL.Communication.Infra.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public Task<List<Product>> List(CancellationToken cancellationToken)
+        {
+            var products = _products.ToListAsync();
+            return products;
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace EDMIL.Communication.Infra.Controllers.ApiModels
+﻿namespace EDMIL.Communication.Infra.Controllers.Api.ApiModels
 {
     public class ApiResponse<TData>
     {

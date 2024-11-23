@@ -9,12 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0E6088EE
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EDMIL.Communication.Infra", "EDMIL.Communication.Infra\EDMIL.Communication.Infra.csproj", "{981847CA-9D56-4A61-A332-EC52F20C797C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDMIL.Communication.Application", "EDMIL.Communication.Application\EDMIL.Communication.Application.csproj", "{0C631A96-FF80-40A4-A8EC-582542D682A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EDMIL.Communication.Application", "EDMIL.Communication.Application\EDMIL.Communication.Application.csproj", "{0C631A96-FF80-40A4-A8EC-582542D682A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDMIL.Communication.Domain", "EDMIL.Communication.Domain\EDMIL.Communication.Domain.csproj", "{B471F089-89FF-45A0-AB4B-FEFA4CD075A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EDMIL.Communication.Domain", "EDMIL.Communication.Domain\EDMIL.Communication.Domain.csproj", "{B471F089-89FF-45A0-AB4B-FEFA4CD075A7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{87E56E10-22A9-4CAE-BE60-F60F29036B1F}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject

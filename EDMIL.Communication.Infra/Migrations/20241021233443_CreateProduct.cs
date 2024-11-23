@@ -12,15 +12,15 @@ namespace EDMIL.Communication.Infra.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Products",
+                name: "products",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Name = table.Column<string>(type: "character varying(255)", maxLength: 255, nullable: false)
+                    Id = table.Column<Guid>(type: "uuid", nullable: false, name: "id"),
+                    Name = table.Column<string>(type: "text", nullable: false, name: "name")
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Products", x => x.Id);
+                    table.PrimaryKey("pk_products", x => x.Id);
                 });
         }
 
@@ -28,7 +28,7 @@ namespace EDMIL.Communication.Infra.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Products");
+                name: "products");
         }
     }
 }

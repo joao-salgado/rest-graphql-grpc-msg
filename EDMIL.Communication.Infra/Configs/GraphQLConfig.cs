@@ -15,7 +15,7 @@ namespace EDMIL.Communication.Infra.Configs
             services
                 .AddGraphQLServer()
                 .AddQueryType<ProductQuery>()      // Register your Query type
-                //.AddMutationType<Mutation>() // Register your Mutation type
+                .AddMutationType<ProductMutation>() // Register your Mutation type
                 .AddFiltering()             // Enable filtering
                 .AddSorting();              // Enable sorting
 

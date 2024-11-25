@@ -12,22 +12,14 @@ namespace EDMIL.Communication.Infra.Controllers.GraphQL
 {
     public class ProductMutation
     {
-        private readonly ICreateProduct _createProduct;
-
-        public ProductMutation(
-           ICreateProduct createProduct
+        public async Task<ProductResponse> CreateProduct(
+            string name,
+            [Service] ICreateProduct _createProduct
         )
         {
-            _createProduct = createProduct;
-        }
-        public async Task<ApiResponse<ProductResponse>> CreateProduct(
-            [FromBody] CreateProductRequest request,
-            CancellationToken cancellationToken
-        )
-        {
-            var output = await _createProduct.Handle(request, cancellationToken);
+            var output = await _createProduct.Handle(new CreateProductRequest(name), CancellationToken.None);
 
-            return new ApiResponse<ProductResponse>(output);
+            return new ProductResponse(output.Id, output.Name);
         }
     }
 }
